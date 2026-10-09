@@ -11,8 +11,13 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "cryptography"
-version = "42.0.5"
+# Fork note: only the distribution name and version change here. The
+# installed import package stays `cryptography`, and the version is frozen
+# explicitly so tags, checkouts, and sdist builds can never silently
+# disagree about the fork version.  See FORK_VERSION in
+# src/cryptography/__about__.py.
+name = "crpt-graph"
+version = "42.0.5+epic.1"
 authors = [
     {name = "The Python Cryptographic Authority and individual contributors", email = "cryptography-dev@python.org"}
 ]
@@ -22,8 +27,6 @@ license = {text = "Apache-2.0 OR BSD-3-Clause"}
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: Apache Software License",
-    "License :: OSI Approved :: BSD License",
     "Natural Language :: English",
     "Operating System :: MacOS :: MacOS X",
     "Operating System :: POSIX",

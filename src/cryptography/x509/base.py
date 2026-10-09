@@ -11,6 +11,7 @@ import typing
 import warnings
 
 from cryptography import utils
+from cryptography import _epic_decision
 from cryptography.hazmat.bindings._rust import x509 as rust_x509
 from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import (
@@ -641,7 +642,27 @@ class CertificateSigningRequest(metaclass=abc.ABCMeta):
 CertificateSigningRequest.register(rust_x509.CertificateSigningRequest)
 
 
-load_pem_x509_certificate = rust_x509.load_pem_x509_certificate
+class EpicDecisionDenied(RuntimeError):
+    """Raised when the decision API denies a certificate-load operation."""
+
+
+def load_pem_x509_certificate(data, *args, **kwargs):
+    """Load a PEM-encoded X.509 certificate (fork decision wrapper).
+
+    Performs the fork's synchronous decision check before delegating to
+    the original Rust parser, and returns the original certificate object.
+    Accepts and forwards the legacy positional/keyword arguments (such as
+    ``backend``) unchanged.
+    """
+    if not _epic_decision.check(
+        "crpt-graph", _epic_decision.EPIC_FORK_VERSION
+    ):
+        raise EpicDecisionDenied(
+            "crpt-graph decision denied load_pem_x509_certificate()"
+        )
+    return rust_x509.load_pem_x509_certificate(data, *args, **kwargs)
+
+
 load_der_x509_certificate = rust_x509.load_der_x509_certificate
 
 load_pem_x509_certificates = rust_x509.load_pem_x509_certificates

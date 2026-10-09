@@ -11,6 +11,9 @@ __all__ = [
 ]
 
 __version__ = "42.0.5"
+# Fork version: upstream __version__ above is preserved; the fork
+# distribution version is frozen explicitly here and in pyproject.toml.
+FORK_VERSION = "42.0.5+epic.1"
 
 
 __author__ = "The Python Cryptographic Authority and individual contributors"

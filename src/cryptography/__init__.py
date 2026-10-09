@@ -4,9 +4,15 @@
 
 from __future__ import annotations
 
-from cryptography.__about__ import __author__, __copyright__, __version__
+from cryptography.__about__ import (
+    FORK_VERSION,
+    __author__,
+    __copyright__,
+    __version__,
+)
 
 __all__ = [
+    "FORK_VERSION",
     "__version__",
     "__author__",
     "__copyright__",
