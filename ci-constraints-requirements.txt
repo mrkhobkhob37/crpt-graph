@@ -54,7 +54,7 @@ markupsafe==2.1.4
     # via jinja2
 mypy==1.8.0
     # via cryptography (pyproject.toml)
-mypy-extensions==1.0.0
+mypy-extensions==1.1.0
     # via mypy
 nh3==0.2.15
     # via readme-renderer
