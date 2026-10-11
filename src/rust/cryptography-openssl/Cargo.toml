@@ -10,5 +10,5 @@ rust-version = "1.63.0"
 [dependencies]
 openssl = "0.10.63"
 ffi = { package = "openssl-sys", version = "0.9.99" }
-foreign-types = "0.3"
+foreign-types = "0.5"
 foreign-types-shared = "0.1"
