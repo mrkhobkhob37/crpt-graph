@@ -17,7 +17,7 @@ cryptography-key-parsing = { path = "cryptography-key-parsing" }
 cryptography-x509 = { path = "cryptography-x509" }
 cryptography-x509-verification = { path = "cryptography-x509-verification" }
 cryptography-openssl = { path = "cryptography-openssl" }
-pem = { version = "3", default-features = false }
+pem = { version = "4", default-features = false }
 openssl = "0.10.63"
 openssl-sys = "0.9.99"
 foreign-types-shared = "0.1"
