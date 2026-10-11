@@ -237,6 +237,10 @@ importlib-metadata==7.0.1 \
     # via
     #   keyring
     #   twine
+importlib-resources==5.13.0 \
+    --hash=sha256:82d5c6cca930697dbbd86c93333bb2c2e72861d4789a11c2662b933e5ad2b528 \
+    --hash=sha256:9f7bd0c97b79972a6cce36a366356d16d5e13b09679c11a58f1014bfdf8e64b2
+    # via sigstore
 jaraco-classes==3.3.0 \
     --hash=sha256:10afa92b6743f25c0cf5f37c6bb6e18e2c5bb84a16527ccfc0040ea377e7aaeb \
     --hash=sha256:c063dd08e89217cee02c8d5e5ec560f2c8ce6cdc2fcdc2e68f7b2e5547ed3621
@@ -535,9 +539,9 @@ securesystemslib==0.31.0 \
     # via
     #   sigstore
     #   tuf
-sigstore==2.1.0 \
-    --hash=sha256:68761c3078aca9bb97af8459602959ff47ce648bf722a8c2c868e45b46aad7e1 \
-    --hash=sha256:7c64b4c6eccee0ec1b54d524d7be57dabc1f1f3651dd723cf195aa6b1f94b4f7
+sigstore==2.1.5 \
+    --hash=sha256:7771153c5ac5a51d6556481f4680dfb602cb5c32c94fe56f87ff1801b8a8f243 \
+    --hash=sha256:86d3ba41135004818c20d09d120140d59d4bd535a092690ff46478047bb8df5b
     # via -r publish-requirements.in
 sigstore-protobuf-specs==0.2.2 \
     --hash=sha256:62c7beabc6910fb570dc4c600e33e81f2d2d683f785202ee109ca394bd829e94 \
