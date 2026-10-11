@@ -136,7 +136,7 @@ sphinxcontrib-qthelp==1.0.7
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.10
     # via sphinx
-sphinxcontrib-spelling==8.0.0
+sphinxcontrib-spelling==8.0.2
     # via cryptography (pyproject.toml)
 tomli==2.0.1
     # via
