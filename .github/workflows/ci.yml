@@ -70,7 +70,7 @@ jobs:
           cache-dependency-path: ci-constraints-requirements.txt
         timeout-minutes: 3
       - name: Setup rust
-        uses: dtolnay/rust-toolchain@1482605bfc5719782e1267fd0c0cc350fe7646b8
+        uses: dtolnay/rust-toolchain@df2a88e9fe4098bad09cb42c3dec7187f15861fc
         with:
           toolchain: ${{ matrix.PYTHON.RUST }}
           components: rustfmt,clippy
